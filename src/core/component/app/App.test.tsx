@@ -1,9 +1,15 @@
-import React from 'react';
-import { render, screen } from '@testing-library/react';
-import App from './App';
+import React from "react";
+import { render } from "@testing-library/react";
+import App from "./App";
+import { Card } from "../../../features/cardlist/components/card/card";
 
-test('renders learn react link', () => {
-  render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+jest.mock("../../../features/cardlist/components/card/card");
+
+describe("Given an App component", () => {
+  describe("when it is rendered", () => {
+    test("then it should call Card component", () => {
+      render(<App />);
+      expect(Card).toHaveBeenCalled();
+    });
+  });
 });
