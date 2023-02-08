@@ -13,7 +13,7 @@ export function Card() {
             />
             <div className="card-body">
               <h2 className="character__name card-title h4">
-                {item.name + "" + item.family}
+                {item.name + " " + item.family}
               </h2>
               <div className="character__info">
                 <ul className="list-unstyled">
@@ -35,12 +35,8 @@ export function Card() {
                   <li>Sirve a: X</li>
                 </ul>
                 <div className="character__actions">
-                  <button className="character__actions__action btn">
-                    habla
-                  </button>
-                  <button className="character__actions__action btn">
-                    muere
-                  </button>
+                  <button className="character__action btn">habla</button>
+                  <button className="character__action btn">muere</button>
                 </div>
               </div>
             </div>
