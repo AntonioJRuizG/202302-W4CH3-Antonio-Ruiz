@@ -12,4 +12,4 @@ export const mockCharacters: Character[] = [
 ];
 
 mockCharacters.push(new Adviser("Tyrion", "Lannister", 30, mockCharacters[2]));
-mockCharacters.push(new Squire("Bronn", "none", 40, mockCharacters[1].name));
+mockCharacters.push(new Squire("Bronn", "none", 40, mockCharacters[1].name, 8));

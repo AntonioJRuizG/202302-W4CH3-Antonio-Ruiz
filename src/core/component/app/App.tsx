@@ -5,9 +5,9 @@ import { Card } from "../../../features/cardlist/components/card/card";
 
 function App() {
   return (
-    <div className="app container">
+    
       <Card></Card>
-    </div>
+    
   );
 }
 

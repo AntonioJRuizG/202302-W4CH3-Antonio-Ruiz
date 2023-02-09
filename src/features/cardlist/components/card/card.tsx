@@ -1,4 +1,8 @@
 import { mockCharacters } from "../../mocks/characters";
+import { Adviser } from "../../models/adviser";
+import { Fighter } from "../../models/fighter";
+import { King } from "../../models/king";
+import { Squire } from "../../models/squire";
 
 export function Card() {
   return (
@@ -27,12 +31,18 @@ export function Card() {
               </div>
               <div className="character__overlay">
                 <ul className="list-unstyled">
-                  <li>Años de reinado: X</li>
-                  <li>Arma: XXX</li>
-                  <li>Destreza: X</li>
-                  <li>Peloteo: X</li>
-                  <li>Asesora a: X</li>
-                  <li>Sirve a: X</li>
+                  {item instanceof King && (
+                    <li> Años de reinado: {item.reignLength}</li>
+                  )}
+                  {item instanceof Fighter && <li> Destreza: {item.skills}</li>}
+                  {item instanceof Fighter && <li> Arma: {item.weapon}</li>}
+                  {item instanceof Squire && <li> Sirve a: {item.servesTo}</li>}
+                  {item instanceof Adviser && (
+                    <li>
+                      Asesora a: {item.helpsTo.name + " " + item.helpsTo.family}
+                    </li>
+                  )}
+                  {item instanceof Squire && <li> Sirve a: {item.peloteo}</li>}
                 </ul>
                 <div className="character__actions">
                   <button className="character__action btn">habla</button>
