@@ -24,8 +24,11 @@ export function Card() {
                   <li>Edad: {item.age} años</li>
                   <li>
                     Estado:
-                    <i className="fas fa-thumbs-down"></i>
-                    <i className="fas fa-thumbs-up"></i>
+                    {item.isLive ? (
+                      <i className="fas fa-thumbs-up"></i>
+                    ) : (
+                      <i className="fas fa-thumbs-down"></i>
+                    )}
                   </li>
                 </ul>
               </div>
