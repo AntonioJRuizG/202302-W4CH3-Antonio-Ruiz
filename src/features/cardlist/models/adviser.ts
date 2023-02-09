@@ -5,9 +5,10 @@ export class Adviser extends Character {
     name: string,
     family: string,
     age: number,
+    isLive: true,
     public helpsTo: Character
   ) {
-    super(name, family, age);
+    super(name, family, age, isLive);
     this.helpsTo = helpsTo;
   }
 
