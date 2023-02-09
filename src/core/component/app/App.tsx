@@ -4,11 +4,7 @@ import { Card } from "../../../features/cardlist/components/card/card";
 // import "./App.css";
 
 function App() {
-  return (
-    <div className="app container">
-      <Card></Card>
-    </div>
-  );
+  return <Card></Card>;
 }
 
 export default App;

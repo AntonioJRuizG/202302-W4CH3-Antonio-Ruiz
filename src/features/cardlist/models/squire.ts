@@ -5,7 +5,8 @@ export class Squire extends Character {
     name: string,
     family: string,
     age: number,
-    public servesTo: string
+    public servesTo: string,
+    public peloteo: number
   ) {
     super(name, family, age);
     this.servesTo = servesTo;
